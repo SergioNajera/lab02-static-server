@@ -1,5 +1,6 @@
 //http
 var http = require("http");
+var fs = require('fs');
 //obtener informacion del entorno de ejecucion con respecto al IP y al puerto que debemos usar
 var PORT = process.env.PORT || 3000;
 var IP = process.env.IP || '127.0.0.1';
@@ -16,12 +17,22 @@ var server = http.createServer(function(req, res){
        "Content-Type" : "Text/html",
        "Server" : "ITGAM@4.2.4"
    });
+   //lectura del archivo a servir
+   fs.readFile('./static/index.html', 'utf8', function(err, content){
+       if(err){
+           res.write("<h1> ERROR DE LECTURA <h1>")
+           res.end();
+       }else{
+           res.write(content);
+           res.end();
+       }
+   });
    //enviamos la respuesta
    res.write("hola mundo Najera");
    //cerrar la conexion
    res.end();
 });
-//poer a trabajar al server
+//poner a trabajar al server
 server.listen(PORT, IP, function(){
 console.log(`>Server Listening @http://${IP}: ${PORT} ...`);
 });
