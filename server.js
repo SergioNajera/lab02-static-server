@@ -13,7 +13,7 @@ var server = http.createServer(function(req, res){
    //armar la respuesta http
    //armar un encabezado http
    res.writeHead(200,{
-       "Content-Type" : "Text/Plain",
+       "Content-Type" : "Text/html",
        "Server" : "ITGAM@4.2.4"
    });
    //enviamos la respuesta
