@@ -4,7 +4,7 @@ config = require('../config/config.js'),
 mime = require('mime');
 
 //exportar la fumcion de servidor estatico
-exports.serve = function(url, res){
+exports.serve = function name(url, res){
 //acompletar el static - path
 var filePath = config.STATIC_PATH + url;
 //verificando si existe o no el archivo dentro del servidor
@@ -28,6 +28,7 @@ if(exists){
                 'Content-Type' : contentType,
                 'Server' : 'PilgrimHawks-Server@2.1.2'
             });
+            res.end(content);
         }
     });
 }else{
