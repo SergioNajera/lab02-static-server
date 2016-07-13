@@ -1,14 +1,17 @@
-var color = 
 function hola(){
-    alert("Bienvenido a esta pagina...");
+    sweetAlert("World Places",
+    "¡Bienvenido a esta página!");
+    document.body.style.backgroundColor = "lightseagreen";
 }
+
 function changeBkgColor(){
     var color = document.body.style.backgroundColor;
-    if(color == "lightseagreen"){
+    console.log("> Color Original: " + color);    
+    if(color == "lightseagreen"){        
         color = "honeydew";
     }else{
         color = "lightseagreen";
     }
-    console.log(">Cambiando el color a :"+ color);
-    element.style.backgroundColor = color;
-};
+    console.log("> Cambiando color a " + color);
+    document.body.style.backgroundColor = color;
+}
