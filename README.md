@@ -1,2 +1,2 @@
 # lab02-static-server
-Servidor web estatico creado para la materia de programacion web moderna del ITGAM / TecMN
+Servidor Web Estatico creado para la materia Programacion Web Moderna del ]ITGAM/TecNM

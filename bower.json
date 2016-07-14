@@ -1,17 +1,17 @@
 {
   "name": "lab02-static-server",
-  "description": "servidor web estatico en node",
+  "description": "Servidor web estatico en node",
   "main": "server.js",
   "authors": [
-    "danajeramirez@gmail.com"
+    "rosa.paez9308@gmail.com"
   ],
   "license": "ISC",
   "keywords": [
     "node",
-    "staric-server",
+    "static-server",
     "web"
   ],
-  "homepage": "https://github.com/SergioNajera/lab02-static-server",
+  "homepage": "https://github.com/Rosa93/lab02-static-server",
   "private": true,
   "ignore": [
     "**/.*",

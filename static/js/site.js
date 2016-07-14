@@ -1,17 +1,17 @@
+var color = "honeydew"
+
 function hola(){
-    sweetAlert("World Places",
-    "¡Bienvenido a esta página!");
-    document.body.style.backgroundColor = "lightseagreen";
+    alert("Bienvenido a mi pagina");
+
 }
 
-function changeBkgColor(){
-    var color = document.body.style.backgroundColor;
-    console.log("> Color Original: " + color);    
-    if(color == "lightseagreen"){        
+function changeBkgColor (element, color){
+    var color = document.dody.style.backgroundColor;
+    if(color == "lightseagreen"){
         color = "honeydew";
     }else{
         color = "lightseagreen";
     }
-    console.log("> Cambiando color a " + color);
-    document.body.style.backgroundColor = color;
+console.log("> Cambia color a:  " + color );
+document.body.style.backgroundColor = color;
 }
