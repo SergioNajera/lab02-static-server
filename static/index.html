@@ -2,13 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/site.css">
+    <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" 
  +    href="./vendor/sweetalert/dist/sweetalert.css">
     <title>Mis lugares favoritos</title>
+    <script type="text/javascript">
+          window.onload = function(){
+            document.onmousemove = function(ev) {
+              var x = -ev.clientX / 4;
+              var y = -ev.clientY / 4;
+              document.body.style.backgroundPosition = x + 'px ' +y+ 'px';
+            };
+          };
+        </script>
 </head>
-<body>
-    <!-- Conetnido -->
+<body style="background: url(fondo.jpg);">|
+
+    <!-- Conetnido 
     <center>
     <h1>Fortune Cookie...</h1><br><br>
     <p> si tu fortuna quieres saber,
@@ -23,6 +33,38 @@
         alt="En construccion">>
     </div></center>
     <!-- Seccion de scripts -->
+    
+    
+    <h1>PRUEBA TU SUERTE!!!</h1>
+        <br>
+        <br>
+        
+        <!--<a href="#" id="enlaceajax">SUERTE!</a>-->
+        <input type="submit" value="SUERTE" id="enlaceajax">
+       <!--<button type="button" id="enlaceajax" value="SUERTE"></button>-->
+      
+        
+        <br>
+        
+       
+        <div id="destino">
+            
+        </div>
+
+        <div class="uno">
+        <img src="img/dragon1.png">
+        </div>
+
+        <div class="dos">
+        <img src="img/dragon2.png">
+        </div>
+
+        <div class="tres">
+        <img src="img/dragon3.png">
+        </div>
+
+
+
     <script src="./vendor/jquery/dist/jquery.js"></script>
     <script src="./vendor/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./js/site.js"></script>
