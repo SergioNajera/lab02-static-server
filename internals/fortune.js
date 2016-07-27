@@ -9,7 +9,7 @@ module.exports = {
         // Conectando el cliente a la base de datos fortune
         //var connectionString = "mongodb://127.0.0.1:27017/fortune";
         var connectionString = 
-        "mongodb://verison:itgampwm2016@ds064718.mlab.com:64718/fortune";  
+        "mongodb://sergionajera:Sergio_22@ds040489.mlab.com:40489/fortuna";  
         mongoClient.connect(connectionString,
         function(err, db){
             if(err){
