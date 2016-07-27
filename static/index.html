@@ -2,71 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/estilos.css">
+    <!-- Import GOOGLE ICON FONT FAMILY -->
+    <link 
+    rel="stylesheet" 
+    href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Para importar localmente 
+    http://stackoverflow.com/questions/31283977/material-design-lite-fonts-and-icons -->
+    <!-- Import Materialize -->
     <link rel="stylesheet" 
- +    href="./vendor/sweetalert/dist/sweetalert.css">
-    <title>Mis lugares favoritos</title>
-    <script type="text/javascript">
-          window.onload = function(){
-            document.onmousemove = function(ev) {
-              var x = -ev.clientX / 4;
-              var y = -ev.clientY / 4;
-              document.body.style.backgroundPosition = x + 'px ' +y+ 'px';
-            };
-          };
-        </script>
+    href="./vendor/materialize/bin/materialize.css">
+    <link 
+    rel="stylesheet" 
+    href="./vendor/sweetalert/dist/sweetalert.css">   
+    <title>Mis lugares Favoritos</title>
 </head>
-<body style="background: url(fondo.jpg);">|
-
-    <!-- Conetnido 
-    <center>
-    <h1>Fortune Cookie...</h1><br><br>
-    <p> si tu fortuna quieres saber,
-        la galleta de la suerte debes de romper.
-        </p>
-        <div id="cookie">
-            <button onclick="getFortuneFromServer()">ROMPE LA GALLETA</button>
+<body>
+    <!-- Contenido -->
+    <div class="parallax-container" style="height:300px">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <br><br>
+                <h1 class="header center white-text">
+                    GALLETA DE LA SUERTE
+                </h1>
+                <div class="row center">
+                    <h5 class="header col s12 grey-text text-lighten-5">
+                        Tu suerte a un click...
+                    </h5>
+                </div>
             </div>
-    <h2>UNDER CONSTRUCTION!!!</h2>
-    <div id="status">
-        <img src="./img/under.jpg" 
-        alt="En construccion">>
-    </div></center>
-    <!-- Seccion de scripts -->
-    
-    
-    <h1>PRUEBA TU SUERTE!!!</h1>
-        <br>
-        <br>
-        
-        <!--<a href="#" id="enlaceajax">SUERTE!</a>-->
-        <input type="submit" value="SUERTE" id="enlaceajax">
-       <!--<button type="button" id="enlaceajax" value="SUERTE"></button>-->
-      
-        
-        <br>
-        
-       
-        <div id="destino">
-            
         </div>
-
-        <div class="uno">
-        <img src="img/dragon1.png">
+        <div class="parallax">
+            <img src="img/china3.jpg">
         </div>
-
-        <div class="dos">
-        <img src="img/dragon2.png">
+    </div>
+    <div class="section white">
+        <div class="row cener container">
+            <h2 class="header center">Rompe la Galleta para saber tu suerte...</h2>
+            <div class="center">
+                <a onclick="getFortuneFromServer()"
+                    class="waves-effect waves-light btn-large">
+                    <i class="large material-icons left">visibility</i> ROMPER
+                </a>
+            </div>
         </div>
-
-        <div class="tres">
-        <img src="img/dragon3.png">
+    </div>
+    <div class="parallax-container" style="height:300px">
+        <div class="parallax">
+            <img src="img/china4.jpg">
         </div>
-
-
-
-    <script src="./vendor/jquery/dist/jquery.js"></script>
+    </div>
+    <footer class="page-footer red">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">
+                        Programación de Aplicaciones Web
+                    </h5>
+                    <p class="grey-text text-lighten-4">
+                        Desarrollado en NODE.JS Verano del 2016.
+                    </p>
+                </div>            
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Instituto Tecnológico de Gustavo A. Madero
+                <a class="grey-text text-lighten-4 right" href="#!">Ivan Rivalcoba</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Seccion de Scripts -->
+    <script src="./vendor/jquery/dist/jquery.min.js"></script>
+    <script src="./vendor/materialize/bin/materialize.js"></script>
     <script src="./vendor/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./js/site.js"></script>
-    </body>
+</body>
 </html>

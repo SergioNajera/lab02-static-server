@@ -7,12 +7,15 @@ var mongoClient = mongodb.MongoClient;
 module.exports = {
     "getFortune" : function(cb){
         // Conectando el cliente a la base de datos fortune
-        mongoClient.connect("mongodb://127.0.0.1:27017/fortune",
+        //var connectionString = "mongodb://127.0.0.1:27017/fortune";
+        var connectionString = 
+        "mongodb://verison:itgampwm2016@ds064718.mlab.com:64718/fortune";  
+        mongoClient.connect(connectionString,
         function(err, db){
             if(err){
                 console.log("> ERROR al conectarse a" +
-                " la base de datos:"+
-                " mongodb://127.0.0.1:27017/fortune");
+                " la base de datos: "+
+                connectionString);
                 var fortunePaper = {
                     "message":
                     "La honestidad es un regalo caro, no lo esperes de gente barata"
@@ -35,8 +38,14 @@ module.exports = {
 
                 // Parseo el objeto resultado en un arreglo
                 objetoRestultado.toArray(function(err, papers){
+                    // Obtengo un indide aleatorio
+                    // contemplando como min = 0
+                    // Y como max = la logitud de arreglo papers
+                    var randomIndex = 
+                    getRandomArbitrary(0, papers.length);
+                    console.log("> RandomIndex calculated: " + randomIndex);
                     var fortunePaperResponse = 
-                    JSON.stringify(papers[0]);
+                    JSON.stringify(papers[randomIndex]);
                     // Cerrar la conexion entre el cliente
                     // y la base de datos
                     db.close()
@@ -49,3 +58,10 @@ module.exports = {
         });
     }
 };
+
+/**
+ * Returns a random number between min (inclusive) and max (exclusive)
+ */
+function getRandomArbitrary(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
