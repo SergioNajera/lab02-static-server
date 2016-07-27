@@ -16,66 +16,108 @@
     href="./vendor/sweetalert/dist/sweetalert.css">   
     <title>Mis lugares Favoritos</title>
 </head>
-<body>
-    <!-- Contenido -->
-    <div class="parallax-container" style="height:300px">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <br><br>
-                <h1 class="header center white-text">
-                    GALLETA DE LA SUERTE
-                </h1>
-                <div class="row center">
-                    <h5 class="header col s12 grey-text text-lighten-5">
-                        Tu suerte a un click...
-                    </h5>
-                </div>
-            </div>
+<body bgcolor="black">
+    
+    <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center" >!!!!GALLETA DE LA SUERTE¡¡¡</a>
+  </nav>
+    
+    
+    <center>
+  
+  <a onclick="getFortuneFromServer()"
+  class="waves-effect waves-light btn-large">
+  <i class="large material-icons left">thumb_up</i> ROMPER
+  </a>
+  
+  
+  <div class="spinner-layer spinner-green">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
         </div>
-        <div class="parallax">
-            <img src="img/china3.jpg">
+      </div>
+    </div>  </center>
+    
+    
+    
+     <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="img/slider1.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>Descubre tu suerte</h3>
+          <h5 class="light grey-text text-lighten-3">clic en romper</h5>
         </div>
-    </div>
-    <div class="section white">
-        <div class="row cener container">
-            <h2 class="header center">Rompe la Galleta para saber tu suerte...</h2>
-            <div class="center">
-                <a onclick="getFortuneFromServer()"
-                    class="waves-effect waves-light btn-large">
-                    <i class="large material-icons left">visibility</i> ROMPER
-                </a>
-            </div>
+      </li>
+      <li>
+        <img src="img/slider2.jpg"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Hoy puede ser un gran dia</h3>
+          <h5 class="light grey-text text-lighten-3">clic en romper</h5>
         </div>
-    </div>
-    <div class="parallax-container" style="height:300px">
-        <div class="parallax">
-            <img src="img/china4.jpg">
+      </li>
+      <li>
+        <img src="img/slider3.jpg"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>todo puede pasar </h3>
+          <h5 class="light grey-text text-lighten-3">clic en romper</h5>
         </div>
-    </div>
-    <footer class="page-footer red">
-        <div class="container">
+      </li>
+      <li>
+        <img src="img/slider4.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>Rompe la galleta</h3>
+          <h5 class="light grey-text text-lighten-3">clic en romper</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <footer class="page-footer">
+          <div class="container">
             <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">
-                        Programación de Aplicaciones Web
-                    </h5>
-                    <p class="grey-text text-lighten-4">
-                        Desarrollado en NODE.JS Verano del 2016.
-                    </p>
-                </div>            
+              <div class="col l6 s12">
+                <h5 class="white-text">Sergio Najera</h5>
+                <h6 class="grey-text text-lighten-4">Instituto Tecnologico de Gustavo A. Madero</h6>
+                <h6 class="grey-text text-lighten-4">111130031</h6>
+                <h6 class="grey-text text-lighten-4">Tics</h6>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text"></h5>
+              </div>
             </div>
-        </div>
-        <div class="footer-copyright">
+          </div>
+          <div class="footer-copyright">
             <div class="container">
-                Instituto Tecnológico de Gustavo A. Madero
-                <a class="grey-text text-lighten-4 right" href="#!">Ivan Rivalcoba</a>
+            © Todos los derechos reservados
+            <a class="grey-text text-lighten-4 right" href="#!"></a>
             </div>
-        </div>
-    </footer>
+          </div>
+        </footer>
     <!-- Seccion de Scripts -->
     <script src="./vendor/jquery/dist/jquery.min.js"></script>
     <script src="./vendor/materialize/bin/materialize.js"></script>
     <script src="./vendor/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./js/site.js"></script>
+    <script>
+        $(document).ready(function(){
+      $('.slider').slider({full_width: true});
+    });
+        
+    </script>
 </body>
 </html>
